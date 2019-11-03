@@ -1,0 +1,36 @@
+<html>
+ <head>
+    <!-- Import custom made customGauge.js Library -->
+    <script src="customGauge.js"></script>
+    ...
+ </head>
+
+ <body>
+   <!-- The div container for our gauge, specify the id -->
+   <div id="myDiv"></div>
+ </body>
+
+ <script>
+ 	var min = 0;
+	var max = 100;
+	var current = 50;
+
+	var config = createConfig(min, max, current);
+
+	setGaugeSize(config, "default");
+
+	var unit = " °C";
+	setUnit(config, unit);
+
+	var colorMap = 'cool'; 
+	setGaugeColor(config, colorMap);
+
+
+	var id = "myDiv"; // the div id containing the gauge
+	createGauge(id, config); // creates the svg 
+	transition(id, current, config); // plays the animation
+
+	// make sure the parameters are passed in the right order
+	createLiveGauge(id, current, min, max, type, size, colorMap, unit);
+ </script>
+</html>
