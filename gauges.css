@@ -1,0 +1,41 @@
+.live-value {
+  text-anchor : middle;
+  font-size : 35px;
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: 2px 2px #c4c4c4;
+}
+
+.warning-status {
+  text-anchor : middle;
+  font-size : 25px;
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: 2px 1px #c4c4c4;
+}
+
+.center-div {
+    position: absolute;
+    top: 40%; left: 40%;
+    transform: translate(-50%,-50%);
+    height: 50%;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+  .center-div {
+      position: relative;
+      transform: none;
+      top: inherit;
+      left: 10%;
+      width: inherit;
+      height: inherit;
+  }
+
+  .col-8, .col-4 {
+    max-width: 100% !important;
+  }
+
+}
