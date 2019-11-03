@@ -11,8 +11,14 @@ For the gauges we use D3.js library to create the svg element and the animation.
 ```html
 <html>
  <head>
+    <!-- Import D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  
     <!-- Import custom made customGauge.js Library -->
     <script src="customGauge.js"></script>
+  
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="gauges.css">
     ...
  </head>
 
@@ -49,7 +55,7 @@ Set the unit of the gauge by calling the `setUnit`. If no unit is to be used jus
 var unit = " °C";
 setUnit(config, unit);
 ```
-The gauge uses linear gradient colors to make the visualization of the data more understandable. Look at the [section](/Configuration/gauges#linear-gradient-colors-explained) here that explains linear gradient colors in more details.
+The gauge uses linear gradient colors to make the visualization of the data more understandable. Look at the Section 3 that explains linear gradient colors in more details.
 
 Set the color map by making a call to `setGaugeColor` function. If no color is specified, the 'autumn' color map will be used.
 ```javascript
@@ -72,11 +78,11 @@ createLiveGauge(id, current, min, max, type, size, colorMap, unit);
 ```
 
 ### Result
-![Gauge]()
+![Gauge](https://github.com/i-ivanova/Gauges/blob/master/Gauge.png)
 
 ## 3. Linear Gradient Colors Explained
 
-The file [customGauge.js]() contains the supported color schemes in the variable `colorMaps`. The function `createGauge` in the [customGauge.js]() automatically creates to smooth the transition between colors depending on the values. This allows to for better visualisation of the data.
+The file [customGauge.js](https://github.com/i-ivanova/Gauges/blob/master/customGauge.js) contains the supported color schemes in the variable `colorMaps`. The function `createGauge` in the [customGauge.js](https://github.com/i-ivanova/Gauges/blob/master/customGauge.js) automatically creates to smooth the transition between colors depending on the values. This allows to for better visualisation of the data.
 
 ## 4. How to Add New Color Maps
 We would highly recommend using this [website](http://angrytools.com/gradient/) to create your own linear gradient colors. You need to specify exactly __tree__ colors that suit together. 
@@ -84,7 +90,7 @@ We would highly recommend using this [website](http://angrytools.com/gradient/) 
 *  The second color indicates the desired state of the sensor's data (desired)
 *  The third color indicates when the sensor's values are very close to or above the upper limit (high)
 
-Then add this to the `colormap` variable in the [customGauge.js]() file as a string presenting the color. Could be in the standard "rgb(0, 0, 0)" format or the hex "#000" format. 
+Then add this to the `colormap` variable in the [customGauge.js](https://github.com/i-ivanova/Gauges/blob/master/customGauge.js) file as a string presenting the color. Could be in the standard "rgb(0, 0, 0)" format or the hex "#000" format. 
 
 ```javascript
   'myColorMap' : {
@@ -94,11 +100,11 @@ Then add this to the `colormap` variable in the [customGauge.js]() file as a str
    }
 ```
 ## 5. How to Add New Color Maps in the Setting Menu of the Dashboard
-To add the new color map in the settings menu go to the [gauge.html]() and look for the `div` with `id = 'color-maps'`. Then add the following option in the option selection by adding the code snippet.
+To add the new color map in the settings menu go to the [gauge.html](https://github.com/i-ivanova/Gauges/blob/master/gauge.html) and look for the `div` with `id = 'color-maps'`. Then add the following option in the option selection by adding the code snippet.
 ```html
 <option class="dropdown-item" value="myColorMap">My New Color Map</option>
 ```
-Note that the `value` attribute should __match exactly__ the color map name defined in the [customGauge.js]() file.
+Note that the `value` attribute should __match exactly__ the color map name defined in the [customGauge.js](https://github.com/i-ivanova/Gauges/blob/master/customGauge.js) file.
  
 It should now appear on the settings menu.
 
