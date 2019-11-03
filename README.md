@@ -94,7 +94,7 @@ Then add this to the `colormap` variable in the [customGauge.js]() file as a str
    }
 ```
 ## 5. How to Add New Color Maps in the Setting Menu of the Dashboard
-To add the new color map in the settings menu go to the [gauge.html]() and look for the `div` with `id = 'color-maps-{{sensor.id}}'`. Then add the following option in the option selection by adding the code snippet.
+To add the new color map in the settings menu go to the [gauge.html]() and look for the `div` with `id = 'color-maps'`. Then add the following option in the option selection by adding the code snippet.
 ```html
 <option class="dropdown-item" value="myColorMap">My New Color Map</option>
 ```
