@@ -55,7 +55,7 @@ Set the unit of the gauge by calling the `setUnit`. If no unit is to be used jus
 var unit = " °C";
 setUnit(config, unit);
 ```
-The gauge uses linear gradient colors to make the visualization of the data more understandable. Look at the Section 3 that explains linear gradient colors in more details.
+The gauge uses linear gradient colors to make the visualization of the data more understandable. Look at the [Section 3](https://github.com/i-ivanova/Gauges/blob/master/README.md#3-linear-gradient-colors-explained) that explains linear gradient colors in more details.
 
 Set the color map by making a call to `setGaugeColor` function. If no color is specified, the 'autumn' color map will be used.
 ```javascript
@@ -99,13 +99,3 @@ Then add this to the `colormap` variable in the [customGauge.js](https://github.
     'color3' : 'rgb(255, 0, 0)'     // high
    }
 ```
-## 5. How to Add New Color Maps in the Setting Menu of the Dashboard
-To add the new color map in the settings menu go to the [gauge.html](https://github.com/i-ivanova/Gauges/blob/master/gauge.html) and look for the `div` with `id = 'color-maps'`. Then add the following option in the option selection by adding the code snippet.
-```html
-<option class="dropdown-item" value="myColorMap">My New Color Map</option>
-```
-Note that the `value` attribute should __match exactly__ the color map name defined in the [customGauge.js](https://github.com/i-ivanova/Gauges/blob/master/customGauge.js) file.
- 
-It should now appear on the settings menu.
-
-![gauge]()
